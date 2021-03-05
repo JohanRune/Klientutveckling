@@ -1,0 +1,43 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    color: blue;
+    font-size: 3em;
+}
+
+p{
+    max-width: 1000px;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+a.nav:link{color: royalblue}
+a.nav:hover {
+    color: red;
+}
+
+.right{
+    text-align: right;
+}
+
+a{
+    text-decoration: none;
+    
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+
+hr {
+    border-radius: 5px;
+    border-width: 2px;
+    margin-top: 2em;
+}
+
+img{
+    margin-bottom: 3em;
+}
