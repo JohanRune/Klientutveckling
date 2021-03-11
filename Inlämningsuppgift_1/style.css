@@ -41,3 +41,7 @@ hr {
 img{
     margin-bottom: 3em;
 }
+
+.center {
+    text-align: center;
+}
