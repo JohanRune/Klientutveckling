@@ -67,3 +67,13 @@ img{
 .top_links{
     margin-bottom: 4em;
 }
+
+
+div.parent {
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
