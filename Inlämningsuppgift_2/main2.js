@@ -55,6 +55,10 @@ if (arrayBoughtProducts.length == 1){
     document.getElementById("button4").style.display="none";
     document.getElementById("button5").style.display="none";
     document.getElementById("button6").style.display="none";
+    document.getElementById("button7").style.display="none";
+    document.getElementById("button8").style.display="none";
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
 }
 
 else if (arrayBoughtProducts.length == 2){
@@ -62,21 +66,59 @@ else if (arrayBoughtProducts.length == 2){
     document.getElementById("button4").style.display="none";
     document.getElementById("button5").style.display="none";
     document.getElementById("button6").style.display="none";
+    document.getElementById("button7").style.display="none";
+    document.getElementById("button8").style.display="none";
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
 }
 
 else if (arrayBoughtProducts.length == 3){
     document.getElementById("button4").style.display="none";
     document.getElementById("button5").style.display="none";
     document.getElementById("button6").style.display="none";
+    document.getElementById("button7").style.display="none";
+    document.getElementById("button8").style.display="none";
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
 }
 
 else if (arrayBoughtProducts.length == 4){
     document.getElementById("button5").style.display="none";
     document.getElementById("button6").style.display="none";
+    document.getElementById("button7").style.display="none";
+    document.getElementById("button8").style.display="none";
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
 }
 
 else if (arrayBoughtProducts.length == 5){
     document.getElementById("button6").style.display="none";
+    document.getElementById("button7").style.display="none";
+    document.getElementById("button8").style.display="none";
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
+}
+
+else if (arrayBoughtProducts.length == 6){
+    document.getElementById("button7").style.display="none";
+    document.getElementById("button8").style.display="none";
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
+}
+
+else if (arrayBoughtProducts.length == 7){
+    document.getElementById("button8").style.display="none";
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
+}
+
+else if (arrayBoughtProducts.length == 8){
+    document.getElementById("button9").style.display="none";
+    document.getElementById("button10").style.display="none";
+}
+
+else if (arrayBoughtProducts.length == 9){
+    document.getElementById("button10").style.display="none";
 }
 
 
