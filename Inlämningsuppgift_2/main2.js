@@ -37,10 +37,11 @@ for (let index = 0; index < arrayBoughtProducts.length; index++) {
     for (let index = 0; index < arrayBoughtProducts.length; index++) {
         let theproduct = arrayBoughtProducts[index];
         output = 
-        "<hr> <h4>" + products[theproduct].title + "</h3><br>" 
-        + products[theproduct].description + "<br>"
-        + "<img src=" + products[theproduct].image + " width=\"300\"> <br>"
-        + products[theproduct].price + "<br>";
+        "<hr> <h6>" + products[theproduct].title + "</h6><br>" 
+        //+ products[theproduct].description + "<br>"
+        //+ "<img src=" + products[theproduct].image + " width=\"300\"> <br>"
+        + products[theproduct].price + " euro <br>"
+        + "Antal:";
 
        // document.getElementById(index).style.visibility="visible";
         document.getElementById(index).insertAdjacentHTML('afterbegin', output);

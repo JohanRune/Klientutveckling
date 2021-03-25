@@ -15,6 +15,8 @@ document.getElementById("toCart").addEventListener("click", goToCart);
 
 
 
+
+
 load();
 
       function load() {
@@ -40,7 +42,7 @@ load();
             "<hr> <h4>" + users[index].title + "</h3><br>" 
             + users[index].description + "<br>"
             + "<img src=" + users[index].image + " width=\"300\"> <br>"
-            + users[index].price + "<br>";
+            + users[index].price + " euro <br>";
             document.getElementById(index).insertAdjacentHTML('afterbegin', output);
              
     
@@ -60,12 +62,8 @@ load();
       var basket = [];
 
      
-//vg. för att kunna välja flera produkter: 
-// appenda lista med produkter, om listan inte är tom. Om listan är tom, skapa en lista (array)
-// och lägg till den som första produkt. I båda fallen spara listan i localStorage. 
-// när kunden trycker på knapp för att betala, checka ut, går man till utcheckssidan. 
-// eller: man sparar produkt-id i en array. 
-function saveToBasket1(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+
+function saveToBasket1(e){ 
   
   products = JSON.parse(localStorage.getItem("jsondata"));
   
