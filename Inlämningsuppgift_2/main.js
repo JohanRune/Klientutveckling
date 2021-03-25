@@ -1,4 +1,18 @@
-document.getElementById("button1").addEventListener("click", saveToBasket);
+document.getElementById("button1").addEventListener("click", saveToBasket1);
+document.getElementById("button2").addEventListener("click", saveToBasket2);
+document.getElementById("button3").addEventListener("click", saveToBasket3);
+document.getElementById("button4").addEventListener("click", saveToBasket4);
+document.getElementById("button5").addEventListener("click", saveToBasket5);
+document.getElementById("button6").addEventListener("click", saveToBasket6);
+document.getElementById("button7").addEventListener("click", saveToBasket7);
+document.getElementById("button8").addEventListener("click", saveToBasket8);
+document.getElementById("button9").addEventListener("click", saveToBasket9);
+document.getElementById("button10").addEventListener("click", saveToBasket10);
+document.getElementById("button11").addEventListener("click", saveToBasket11);
+document.getElementById("button12").addEventListener("click", saveToBasket12);
+
+document.getElementById("toCart").addEventListener("click", goToCart);
+
 
 
 load();
@@ -12,58 +26,141 @@ load();
 
       function render(users) {
         console.log(users);
+
+        let compressed = JSON.stringify(users);
+        localStorage.setItem("jsondata", compressed);
+
+       // let uncompressed = JSON.parse(localStorage.getItem("jsondata"));
+        //console.log(uncompressed);
+    
+
         let output = "";
         for (let index = 1; index < 13; index++) {
             output = 
             "<hr> <h4>" + users[index].title + "</h3><br>" 
             + users[index].description + "<br>"
             + "<img src=" + users[index].image + " width=\"300\"> <br>"
-            + users[index].price + "br";
+            + users[index].price + "<br>";
             document.getElementById(index).insertAdjacentHTML('afterbegin', output);
-          
+             
+    
         }
 
-//        users.forEach((user) => (output += user.title + "<br>"));
-        
       }
 
+
+      function goToCart(){
+        
+        localStorage.setItem("basket", JSON.stringify(basket));
+        
+        const win = window.open("basket.html", '_blank');
+
+      }
+
+      var basket = [];
+
      
+//vg. för att kunna välja flera produkter: 
+// appenda lista med produkter, om listan inte är tom. Om listan är tom, skapa en lista (array)
+// och lägg till den som första produkt. I båda fallen spara listan i localStorage. 
+// när kunden trycker på knapp för att betala, checka ut, går man till utcheckssidan. 
+// eller: man sparar produkt-id i en array. 
+function saveToBasket1(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+  
+  products = JSON.parse(localStorage.getItem("jsondata"));
+  
+
+  basket.push("0");
+  for (let index = 0; index < basket.length; index++) {
+    console.log(basket[index])
+  }
 
 
-
-/* const sko1 = {name: "Nike", price: "990 kr"};
-const key = sko1.name;
-
-let html = `<div> <p>hej ${key} </p>`;
-html += `<p>hallå</p> </div>`;
-html += `<a id="10" href="basket.html", target = "_blank">Köp ännu mer!!</a>`;
-html += `<img class = "border" src="https://www.wigglestatic.com/product-media/104406555/Reebok-Women-s-Floatride-Panthea-Running-Shoe-Running-Shoes-black-white-pure-gre-SS20-EH28434.jpg?w=430&h=430&a=7" alt="CashMachine" width = "400">`
-
-console.log(html);
-
-document.getElementById("product1").insertAdjacentHTML('afterbegin', html); */
-//document.getElementById("skoNamn").innerHTML= html;
-
-//document.getElementById("skoPris").innerHTML= sko1.price;
-// skapa ett objekt som tar info från index.html om aktuell sko och lägger in i objektet.
-
-    
+//localStorage.setItem("basket", basket)
 
 
-function saveToBasket(e){
-    console.log("hejsan")
-    //document.getElementById("choosenProduct").insertAdjacentHTML('afterbegin', "hej");
-  //  document.getElementById("choosenProduct").innerHTML="hej";
-    localStorage.setItem("product", html);
-    const win = window.open("basket.html", '_blank');
-    //win.focus();
-    e.preventDefault();
+let compressed = JSON.stringify(products[0]); //ändra siffran till vilken knapp som har använts.
+  localStorage.setItem("choosenProduct", compressed);
+
+
+//G-nivå
+/*   users = JSON.parse(localStorage.getItem("jsondata"));
+  let compressed = JSON.stringify(users[0]); //ändra siffran till vilken knapp som har använts.
+  localStorage.setItem("choosenProduct", compressed);
+  console.log(compressed)
+ */
+ // const win = window.open("basket.html", '_blank');
+  //win.focus();
+  e.preventDefault();
 }
 
 
-    
-   // localStorage.setItem("myName", sko1.name);
-    localStorage.setItem("myPrice", 100);
+function saveToBasket2(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+  basket.push("1");
+  e.preventDefault();
+}
+//localStorage.setItem("basket", basket)
 
-   
-    console.log(localStorage.getItem("myPrice"))
+
+//let compressed = JSON.stringify(products[1]); //ändra siffran till vilken knapp som har använts.
+ // localStorage.setItem("choosenProduct", compressed);
+
+
+//G-nivå
+/*   users = JSON.parse(localStorage.getItem("jsondata"));
+  let compressed = JSON.stringify(users[0]); //ändra siffran till vilken knapp som har använts.
+  localStorage.setItem("choosenProduct", compressed);
+  console.log(compressed)
+ */
+ // const win = window.open("basket.html", '_blank');
+  //win.focus();
+  
+  function saveToBasket3(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("2");
+    e.preventDefault();
+  }
+
+  function saveToBasket4(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("3");
+    e.preventDefault();
+  }
+
+  function saveToBasket5(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("4");
+    e.preventDefault();
+  }
+
+  function saveToBasket6(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("5");
+    e.preventDefault();
+  }
+
+  function saveToBasket7(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("6");
+    e.preventDefault();
+  }
+
+  function saveToBasket8(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("7");
+    e.preventDefault();
+  }
+
+  function saveToBasket9(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("8");
+    e.preventDefault();
+  }
+
+  function saveToBasket10(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("9");
+    e.preventDefault();
+  }
+
+  function saveToBasket11(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("10");
+    e.preventDefault();
+  }
+
+  function saveToBasket12(e){ //sätt siffra efter utifrån vilken knapp som tryckts. 
+    basket.push("11");
+    e.preventDefault();
+  }
