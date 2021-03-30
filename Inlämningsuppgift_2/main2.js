@@ -131,10 +131,11 @@ function validateForm() {
         return false;
     }
 
-    if (!/^[a-zA-Z]*$/g.test(x)){
+    if (!/^[a-zA-ZÅÄÖåäö\s]*$/g.test(x)){
         alert ("Letters only in name");
         return false;
     }
+    
 
     var x = document.forms["myForm"]["telephone"].value;
     if (x == "") {
@@ -143,7 +144,7 @@ function validateForm() {
     }
 
     if(isNaN(x)){
-        alert ("Not a number in telephone");
+        alert ("Only digits in telephone number");
         return false;
     }
 
@@ -152,7 +153,7 @@ function validateForm() {
         alert ("Email address must be filled out");
         return false;
     }
-    if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g.test(x)){
+    if (!/^[a-zA-Z0-9ÅÄÖåäö.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9ÅÄÖåäö-]+(?:\.[a-zA-Z0-9ÅÄÖåäö-]+)*$/g.test(x)){
         alert ("Not a valid email address");
         return false;
     }
@@ -162,7 +163,7 @@ function validateForm() {
         alert ("Street address must be filled out");
         return false;
     }
-    if (!/^[a-zA-Z0-9]*$/g.test(x)){
+    if (!/^[a-zA-Z0-9ÅÄÖåäö\s]*$/g.test(x)){
         alert ("Only letters and numbers in street address");
         return false;
     }
@@ -172,7 +173,7 @@ function validateForm() {
         alert ("Postal code and city must be filled out");
         return false;
     }
-    if (!/^[a-zA-Z0-9]*$/g.test(x)){
+    if (!/^[a-zA-Z0-9ÅÄÖåäö\s]*$/g.test(x)){
         alert ("Only letters and numbers in postal number and city");
         return false;
     }
